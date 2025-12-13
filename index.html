@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Color Generator</title>
+<style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.5s;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        background-color: #f0f0f0;
+    }
+</style>
+</head>
+<body>
+<button onclick="changeColor()">Change Background Color</button>
+
+<script>
+function changeColor() {
+    // Generate random color in hex format
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+}
+</script>
+</body>
+</html>
